@@ -197,7 +197,7 @@ class TransformerCausalDecoder(nn.Module):
         q = q.transpose(0, 1)
         v = v.transpose(0, 1)
         if dynamics:
-            forward_mask = self.generate_square_subsequent_mask(x.shape[0])
+            forward_mask = self.generate_square_subsequent_mask(q.shape[0]) #исправление заменил x.shape[0] на q.shape[0]
         else:
             forward_mask = self.forward_mask[:l, :l]
         feat = self.transformer_decoder(q, v, tgt_mask=forward_mask, memory_mask=forward_mask,

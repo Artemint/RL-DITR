@@ -51,6 +51,7 @@ class Model(object):
         self.df_meta_path = df_meta_path
         self.beam_size = beam_size
         self.model_dir = model_dir
+        self.device = device if device is not None else torch.device('cpu')
 
         self.pipeline = DiabetesPipeline()
         self.agent = InsulinArmAgent.build_from_dir(model_dir, device)
@@ -127,13 +128,33 @@ class Model(object):
         beam_size = beam_size if beam_size is not None else self.beam_size
         output = self.agent.self_rollout(obs, action, option, t0, tt + 7, beam_size=beam_size)  # extra one day
         actions_out, options_out, values_out, rewards_out = output
-        # print(df2[['datetime_norm','insulin|insulin','glu|glu']].iloc[t0-7:tt+1])
+
+        # === Извлекаем глюкозу из результатов beam search ===
+        # Beam search уже вычислил оптимальную последовательность и все предсказания
+        # Нам нужно только извлечь соответствующие значения глюкозы
+        with torch.no_grad():
+            # Используем оптимальные действия для получения глюкозы
+            obs_tensor = torch.tensor(obs, dtype=torch.float32, device=self.device)
+            optimal_actions = torch.tensor(actions_out, dtype=torch.long, device=self.device).unsqueeze(0)
+            option_tensor = torch.tensor(option, dtype=torch.long, device=self.device)
+            padding_tensor = torch.tensor(padding, dtype=torch.bool, device=self.device)
+            
+            # Получаем глюкозу для оптимальной последовательности
+            outputs = self.agent.model.forward(
+                obs_tensor, optimal_actions, option_tensor, padding_tensor, n_step=obs.shape[1]
+            )
+            glu_pred = outputs['glu'].squeeze().cpu().numpy()
+            if glu_pred.ndim == 2:
+                glu_pred_diag = np.diag(glu_pred)
+            else:
+                glu_pred_diag = glu_pred
 
         # convert to output format
         ts = sr_dt.iloc[t0:tt]
         df_result = ts.to_frame('datetime')
         df_result['action'] = actions_out[:-7]  # remove extra one day
         df_result['option'] = options_out[:-7]  # remove extra one day
+        df_result['predicted_glucose'] = glu_pred_diag[t0:tt]  # Новое: добавляем глюкозу
 
         df_output = df_result[df_result['option'] > 0]
         df_output = df_output.drop(columns=['option'])
@@ -141,24 +162,38 @@ class Model(object):
         df_output = df_output.rename(columns={'action': 'dose'})
         result = df_output.to_dict('records')
 
-        return result
+        # === Новое: возвращаем также полный временной ряд глюкозы ===
+        full_glucose_profile = pd.DataFrame({
+            'datetime': sr_dt.iloc[t0:tt].astype(str).values,
+            'predicted_glucose': glu_pred_diag[t0:tt]
+        }).to_dict('records')
+
+        # === Новое: добавляем исходные значения глюкозы для сравнения ===
+        # Ищем реальные значения глюкозы в исходном df2
+        if 'glu|glu' in df2.columns:
+            observed_glucose = pd.DataFrame({
+                'datetime': df2['datetime_norm'].astype(str),
+                'observed_glucose': df2['glu|glu']
+            }).dropna(subset=['observed_glucose']).to_dict('records')
+        else:
+            observed_glucose = []
+
+        return {'recommendations': result, 'glucose_profile': full_glucose_profile, 'observed_glucose': observed_glucose}
 
 
 def predict(model_dir, df_meta_path, csv_path, scheme, start_time, days=1, beam_size=5):
+    import torch
     df_data = pd.read_csv(csv_path)
     df_data['datetime'] = pd.to_datetime(df_data['datetime'])
-    model = Model(model_dir=model_dir, df_meta_path=df_meta_path)
+    device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+    model = Model(model_dir=model_dir, df_meta_path=df_meta_path, device=device)
     result = model.predict(df_data, scheme, start_time, days, beam_size=beam_size)
     return result
 
 
 if __name__ == '__main__':
     import fire
-
-    # df_meta_path = 'assets/models/features.csv'
-    # model_dir = 'assets/models/weights'
-    # csv_path = 'assets/data/sample.csv'
-    # scheme = ['premixed', 'na', 'premixed', 'na']
-    # start_time = '2022-01-16'
-    # days = 2
+    import json
     result = fire.Fire(predict)
+    with open('results/predictions_full.json', 'w') as f:
+        json.dump(result, f, ensure_ascii=False, indent=2)
