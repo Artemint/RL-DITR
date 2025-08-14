@@ -129,21 +129,18 @@ class Model(object):
         output = self.agent.self_rollout(obs, action, option, t0, tt + 7, beam_size=beam_size)  # extra one day
         actions_out, options_out, values_out, rewards_out = output
 
-        # === Извлекаем глюкозу из результатов beam search ===
-        # Beam search уже вычислил оптимальную последовательность и все предсказания
-        # Нам нужно только извлечь соответствующие значения глюкозы
+        # === Новое: получить предсказания глюкозы на каждом временном шаге ===
         with torch.no_grad():
-            # Используем оптимальные действия для получения глюкозы
+            # Используем RL-модель напрямую для симуляции гликемии по выбранным действиям
             obs_tensor = torch.tensor(obs, dtype=torch.float32, device=self.device)
-            optimal_actions = torch.tensor(actions_out, dtype=torch.long, device=self.device).unsqueeze(0)
+            action_tensor = torch.tensor(action, dtype=torch.long, device=self.device)
             option_tensor = torch.tensor(option, dtype=torch.long, device=self.device)
             padding_tensor = torch.tensor(padding, dtype=torch.bool, device=self.device)
-            
-            # Получаем глюкозу для оптимальной последовательности
             outputs = self.agent.model.forward(
-                obs_tensor, optimal_actions, option_tensor, padding_tensor, n_step=obs.shape[1]
+                obs_tensor, action_tensor, option_tensor, padding_tensor, n_step=obs.shape[1]
             )
-            glu_pred = outputs['glu'].squeeze().cpu().numpy()
+            glu_pred = outputs['glu'].squeeze().cpu().numpy()  # shape: [T] или [T, T]
+            # Исправление: если glu_pred двумерный, берём диагональ
             if glu_pred.ndim == 2:
                 glu_pred_diag = np.diag(glu_pred)
             else:
@@ -157,9 +154,14 @@ class Model(object):
         df_result['predicted_glucose'] = glu_pred_diag[t0:tt]  # Новое: добавляем глюкозу
 
         df_output = df_result[df_result['option'] > 0]
-        df_output = df_output.drop(columns=['option'])
         df_output['datetime'] = df_output['datetime'].astype('str')
         df_output = df_output.rename(columns={'action': 'dose'})
+        
+        # Добавляем информацию о типе инсулина
+        option_map_reverse = {1: 'rapid', 2: 'medium', 3: 'long'}
+        df_output['insulin_type'] = df_output['option'].map(option_map_reverse)
+        df_output = df_output.drop(columns=['option'])
+        
         result = df_output.to_dict('records')
 
         # === Новое: возвращаем также полный временной ряд глюкозы ===
@@ -192,7 +194,7 @@ def predict(model_dir, df_meta_path, csv_path, scheme, start_time, days=1, beam_
 
 
 if __name__ == '__main__':
-    import fire
+    import fire # type: ignore
     import json
     result = fire.Fire(predict)
     with open('results/predictions_full.json', 'w') as f:

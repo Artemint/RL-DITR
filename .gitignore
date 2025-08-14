@@ -213,3 +213,19 @@ cython_debug/
 
 # test file
 /tests
+
+# === RL-DITR Project Specific Rules ===
+# Исключаем данные пациента, но сохраняем модель и структуру
+/assets/data/*
+!/assets/data/.gitkeep
+!/assets/data/sample.csv
+
+# Сохраняем модель полностью
+!/assets/models/
+
+/results/*
+!/results/.gitkeep
+
+# Исключаем временные файлы проекта
+*.DS_Store
+*.log

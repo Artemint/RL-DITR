@@ -1,0 +1,5 @@
+{
+  "max_seq_len": 128,
+  "gamma": 0.9,
+  "reward_dtype": "risk"
+}

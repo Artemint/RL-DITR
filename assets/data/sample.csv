@@ -1,0 +1,102 @@
+,datetime,key_type,key_group,key,value
+0,2022-01-13 13:49,cont,base,age,65.66027397
+1,2022-01-13 13:49,"cat2(M,F)",base,gender,M
+2,2022-01-13 13:49,cont,base,DBP,73
+3,2022-01-13 13:49,cont,base,SBP,126
+4,2022-01-13 13:49,cont,base,RR,20
+5,2022-01-13 13:49,cont,base,height,163
+6,2022-01-13 13:49,cont,base,weight,75.6
+7,2022-01-13 13:49,cont,base,BMI,28.45421356
+8,2022-01-13 14:47,cont,glu,glu,15.1
+9,2022-01-13 15:46,cont,glu,glu,20.2
+10,2022-01-13 15:59,cont,glu,glu,21.2
+11,2022-01-13 19:00,cont,glu,glu,23.4
+12,2022-01-13 21:00,cont,glu,glu,20.4
+13,2022-01-14 06:00,cont,glu,glu,10.6
+14,2022-01-14 08:30,cont,glu,glu,15.4
+15,2022-01-14 10:30,cont,glu,glu,16.6
+16,2022-01-14 13:00,cont,glu,glu,23.8
+17,2022-01-14 15:58,cont,glu,glu,18.1
+18,2022-01-14 19:00,cont,glu,glu,20.2
+19,2022-01-14 21:00,cont,glu,glu,17.7
+20,2022-01-15 06:00,cont,glu,glu,9.4
+21,2022-01-15 08:30,cont,glu,glu,16.3
+22,2022-01-15 10:30,cont,glu,glu,16.5
+23,2022-01-15 13:00,cont,glu,glu,16
+24,2022-01-15 15:56,cont,glu,glu,13.5
+25,2022-01-15 19:00,cont,glu,glu,12.8
+26,2022-01-15 21:00,cont,glu,glu,13.5
+27,2022-01-16 08:30,cont,glu,glu,16.5
+28,2022-01-16 10:30,cont,glu,glu,15.2
+29,2022-01-16 13:00,cont,glu,glu,18.5
+30,2022-01-16 16:30,cont,glu,glu,14
+31,2022-01-16 19:00,cont,glu,glu,15.1
+32,2022-01-16 21:00,cont,glu,glu,13.7
+53,2022-01-13 13:49,cat2,diag,"Elevated blood sugar,alcoholic liver cirrhosis,decompensated phase of liver cirrhosis",1
+54,2022-01-13 16:30,cat2,insulin,insulin,8
+55,2022-01-14 06:00,cat2,insulin,insulin,12
+56,2022-01-14 16:30,cat2,insulin,insulin,8
+57,2022-01-15 06:00,cat2,insulin,insulin,16
+58,2022-01-15 16:30,cat2,insulin,insulin,10
+59,2022-01-16 06:00,cat2,insulin,insulin,16
+60,2022-01-16 16:30,cat2,insulin,insulin,10
+68,2022-01-13 16:30,"cat6(na,medium,short,rapid,long,premixed)",insulin,insulin_group,premixed
+69,2022-01-14 06:00,"cat6(na,medium,short,rapid,long,premixed)",insulin,insulin_group,premixed
+70,2022-01-14 16:30,"cat6(na,medium,short,rapid,long,premixed)",insulin,insulin_group,premixed
+71,2022-01-15 06:00,"cat6(na,medium,short,rapid,long,premixed)",insulin,insulin_group,premixed
+72,2022-01-15 16:30,"cat6(na,medium,short,rapid,long,premixed)",insulin,insulin_group,premixed
+73,2022-01-16 06:00,"cat6(na,medium,short,rapid,long,premixed)",insulin,insulin_group,premixed
+74,2022-01-16 16:30,"cat6(na,medium,short,rapid,long,premixed)",insulin,insulin_group,premixed
+82,2022-01-13 15:46,cont,test,Mean hemoglobin concentration,15
+83,2022-01-13 15:46,cont,test,Mean corpuscular volume,2
+84,2022-01-13 15:46,cont,test,Monocyte percentage,0.2
+85,2022-01-13 15:46,cont,test,Mean platelet volume,3
+86,2022-01-13 15:46,cont,test,Lymphocyte count,41
+87,2022-01-13 15:46,cont,test,Lymphocyte percentage,39.8
+88,2022-01-13 15:46,cont,test,Anion gap,4.39
+89,2022-01-13 15:46,cont,test,White blood cell count,5.05
+90,2022-01-13 15:46,cont,test,Hemolytic index,3
+91,2022-01-13 15:46,cont,test,Jaundice index,59.2
+92,2022-01-13 15:46,cont,test,Platelet volume,0.14
+93,2022-01-13 15:46,cont,test,Calcium phosphate product,32.1
+94,2022-01-13 15:46,cont,test,White blood cell count,344
+95,2022-01-13 15:46,cont,test,Red blood cell count,93.4
+96,2022-01-13 15:46,cont,test,Urine sodium,8.1
+97,2022-01-13 15:46,cont,test,Urine phosphorus,11.7
+98,2022-01-13 15:46,cont,test,Urine calcium,1.5
+99,2022-01-13 15:46,cont,test,Urine chlorine,29.5
+100,2022-01-13 15:46,cont,test,Urine creatinine determination,9
+101,2022-01-13 15:46,cont,test,Urine potassium,16
+102,2022-01-13 15:46,cont,test,Urine magnesium,3
+103,2022-01-13 15:46,cont,test,Urine albumin,22
+104,2022-01-13 15:46,cont,test,Urine albumin,5.4
+105,2022-01-13 15:46,cont,test,Urine calcium/urine creatinine,1.541
+106,2022-01-14 06:25,cont,test,Urine magnesium,10
+107,2022-01-14 06:25,cont,test,Urine sodium,54
+108,2022-01-14 06:28,cont,test,Urine phosphorus,82
+109,2022-01-14 06:28,cont,test,Urine sodium,7.6
+110,2022-01-14 06:28,cont,test,Urine phosphorus,0.86
+111,2022-01-14 06:28,cont,test,Urine calcium,75
+112,2022-01-14 06:28,cont,test,Urine chlorine,8015
+113,2022-01-14 06:28,cont,test,Urine creatinine determination,21.9
+114,2022-01-14 06:28,cont,test,Urine potassium,2.01
+115,2022-01-14 06:28,cont,test,Urine magnesium,79.4
+116,2022-01-14 06:28,cont,test,Urine albumin,0.11
+117,2022-01-14 16:06,cont,test,Urine sodium,35.2
+118,2022-01-14 16:06,cont,test,Urine phosphorus,0.2
+119,2022-01-14 16:06,cont,test,Humoral protein,0.62
+120,2022-01-14 16:06,cont,test,Urine calcium,84
+121,2022-01-14 16:06,cont,test,Urine chlorine,3026
+122,2022-01-14 16:06,cont,test,Urine albumin,14.5
+123,2022-01-14 16:06,cont,test,Urine calcium/urine creatinine,1.03
+124,2022-01-14 16:06,cont,test,Urine magnesium,83
+125,2022-01-14 16:06,cont,test,Urine sodium,4.4
+126,2022-01-16 06:55,cont,test,Urine sodium,64
+127,2022-01-16 06:55,cont,test,Urine phosphorus,22.6
+128,2022-01-16 06:55,cont,test,Humoral protein,1.07
+129,2022-01-16 06:55,cont,test,Urine calcium,70
+130,2022-01-16 06:55,cont,test,Urine chlorine,16142
+131,2022-01-16 06:55,cont,test,Urine albumin,36.7
+132,2022-01-16 06:55,cont,test,Urine calcium/urine creatinine,3.06
+133,2022-01-16 06:55,cont,test,Urine albumin,112.3
+134,2022-01-16 06:55,cont,test,Humoral protein,0.07

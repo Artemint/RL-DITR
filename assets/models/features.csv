@@ -1,0 +1,201 @@
+key_group,key,feat_name,key_type,cat,n_dim,delay,interp
+base,BMI,base|BMI,cont,,1,0,ffill
+base,DBP,base|DBP,cont,,1,0,ffill
+base,RR,base|RR,cont,,1,0,ffill
+base,SBP,base|SBP,cont,,1,0,ffill
+base,age,base|age,cont,,1,0,ffill
+base,gender,base|gender,"cat2(M,F)","(M,F)",2,0,ffill
+base,height,base|height,cont,,1,0,ffill
+base,weight,base|weight,cont,,1,0,ffill
+sym,Fatigue,sym|Fatigue,cat2,,2,0,ffill
+sym,Weight loss,sym|Weight loss,cat2,,2,0,ffill
+sym,Weight change,sym|Weight change,cat2,,2,0,ffill
+sym,Abnormal weight gain,sym|Abnormal weight gain,cat2,,2,0,ffill
+sym,Astriction,sym|Astriction,cat2,,2,0,ffill
+sym,General fatigue,sym|General fatigue,cat2,,2,0,ffill
+sym,Cold sweat,sym|Cold sweat,cat2,,2,0,ffill
+sym,Perspiration,sym|Perspiration,cat2,,2,0,ffill
+sym,Hyperhidrosis,sym|Hyperhidrosis,cat2,,2,0,ffill
+sym,Weakness of both lower extremities,sym|Weakness of both lower extremities,cat2,,2,0,ffill
+sym,Edema of both lower extremities,sym|Edema of both lower extremities,cat2,,2,0,ffill
+sym,Numbness in both lower extremities,sym|Numbness in both lower extremities,cat2,,2,0,ffill
+sym,Numbness in both hands,sym|Numbness in both hands,cat2,,2,0,ffill
+sym,Blurred vision in both eyes,sym|Blurred vision in both eyes,cat2,,2,0,ffill
+sym,Fever,sym|Fever,cat2,,2,0,ffill
+sym,Dry mouth,sym|Dry mouth,cat2,,2,0,ffill
+sym,Thirst,sym|Thirst,cat2,,2,0,ffill
+sym,Vomiting,sym|Vomiting,cat2,,2,0,ffill
+sym,Cough,sym|Cough,cat2,,2,0,ffill
+sym,Numbness of limbs,sym|Numbness of limbs,cat2,,2,0,ffill
+sym,Polyuria,sym|Polyuria,cat2,,2,0,ffill
+sym,Polydipsia,sym|Polydipsia,cat2,,2,0,ffill
+sym,Increased frequency of nocturia,sym|Increased frequency of nocturia,cat2,,2,0,ffill
+sym,Dizziness,sym|Dizziness,cat2,,2,0,ffill
+sym,Headache,sym|Headache,cat2,,2,0,ffill
+sym,Increased urination,sym|Increased urination,cat2,,2,0,ffill
+sym,Increased urine foam,sym|Increased urine foam,cat2,,2,0,ffill
+sym,Increased foam in urine,sym|Increased foam in urine,cat2,,2,0,ffill
+sym,Frequent micturition,sym|Frequent micturition,cat2,,2,0,ffill
+sym,Palpitations,sym|Palpitations,cat2,,2,0,ffill
+sym,Nausea,sym|Nausea,cat2,,2,0,ffill
+sym,Numbness of hands and feet,sym|Numbness of hands and feet,cat2,,2,0,ffill
+sym,Anuria,sym|Anuria,cat2,,2,0,ffill
+sym,Excessive hunger,sym|Excessive hunger,cat2,,2,0,ffill
+sym,Dyspnea,sym|Dyspnea,cat2,,2,0,ffill
+sym,Edema,sym|Edema,cat2,,2,0,ffill
+sym,Foamy urine,sym|Foamy urine,cat2,,2,0,ffill
+sym,Emaciation,sym|Emaciation,cat2,,2,0,ffill
+sym,Pain,sym|Pain,cat2,,2,0,ffill
+sym,Poor sleep,sym|Poor sleep,cat2,,2,0,ffill
+sym,Poor mental state,sym|Poor mental state,cat2,,2,0,ffill
+sym,Poor appetite,sym|Poor appetite,cat2,,2,0,ffill
+sym,Chest pain,sym|Chest pain,cat2,,2,0,ffill
+sym,Chest distress,sym|Chest distress,cat2,,2,0,ffill
+sym,Diarrhea,sym|Diarrhea,cat2,,2,0,ffill
+sym,Abdominal pain,sym|Abdominal pain,cat2,,2,0,ffill
+sym,Impaired vision,sym|Impaired vision,cat2,,2,0,ffill
+sym,Blurred vision,sym|Blurred vision,cat2,,2,0,ffill
+sym,Loss of appetite,sym|Loss of appetite,cat2,,2,0,ffill
+sym,Polyphagia,sym|Polyphagia,cat2,,2,0,ffill
+diag,Type 1 diabetes,diag|Type 1 diabetes,cat2,,2,0,ffill
+diag,Type 2 diabetes,diag|Type 2 diabetes,cat2,,2,0,ffill
+diag,Type 2 diabetes peripheral neuropathy,diag|Type 2 diabetes peripheral neuropathy,cat2,,2,0,ffill
+diag,Type 2 diabetes peripheral vascular disease,diag|Type 2 diabetes peripheral vascular disease,cat2,,2,0,ffill
+diag,Type 2 diabetes retinopathy,diag|Type 2 diabetes retinopathy,cat2,,2,0,ffill
+diag,Coronary heart disease,diag|Coronary heart disease,cat2,,2,0,ffill
+diag,Post-coronary artery stenting status,diag|Post-coronary artery stenting status,cat2,,2,0,ffill
+diag,Coronary atherosclerotic heart disease,diag|Coronary atherosclerotic heart disease,cat2,,2,0,ffill
+diag,Thyroid nodule,diag|Thyroid nodule,cat2,,2,0,ffill
+diag,Nature of thyroid nodules,diag|Nature of thyroid nodules,cat2,,2,0,ffill
+diag,Diabetes,diag|Diabetes,cat2,,2,0,ffill
+diag,Peripheral vascular disease of diabetes,diag|Peripheral vascular disease of diabetes,cat2,,2,0,ffill
+diag,Diabetes peripheral neuropathy,diag|Diabetes peripheral neuropathy,cat2,,2,0,ffill
+diag,Diabetic nephropathy,diag|Diabetic nephropathy,cat2,,2,0,ffill
+diag,Diabetic retinopathy,diag|Diabetic retinopathy,cat2,,2,0,ffill
+diag,Fatty liver,diag|Fatty liver,cat2,,2,0,ffill
+diag,Osteoporosis,diag|Osteoporosis,cat2,,2,0,ffill
+diag,Osteopenia,diag|Osteopenia,cat2,,2,0,ffill
+diag,Hyperlipidemia,diag|Hyperlipidemia,cat2,,2,0,ffill
+diag,Hypertension,diag|Hypertension,cat2,,2,0,ffill
+test,Free triiodothyronine(FT3),test|Free triiodothyronine(FT3),cont,,1,0,zero
+test,Free thyroxine(FT4),test|Free thyroxine(FT4),cont,,1,0,zero
+test,Thyroid stimulating hormone(TSH),test|Thyroid stimulating hormone(TSH),cont,,1,0,zero
+test,Total triiodothyronine(TT3),test|Total triiodothyronine(TT3),cont,,1,0,zero
+test,Total thyroxine(TT4),test|Total thyroxine(TT4),cont,,1,0,zero
+test,24-hour urine chlorine,test|24-hour urine chlorine,cont,,1,0,zero
+test,24-hour urine phosphorus,test|24-hour urine phosphorus,cont,,1,0,zero
+test,24-hour urine protein,test|24-hour urine protein,cont,,1,0,zero
+test,24-hour urine output,test|24-hour urine output,cont,,1,0,zero
+test,24-hour urine calcium,test|24-hour urine calcium,cont,,1,0,zero
+test,24-hour urine sodium,test|24-hour urine sodium,cont,,1,0,zero
+test,24-hour urine potassium,test|24-hour urine potassium,cont,,1,0,zero
+test,24-hour urine magnesium,test|24-hour urine magnesium,cont,,1,0,zero
+test,24-hour magnesium,test|24-hour magnesium,cont,,1,0,zero
+test,ACR,test|ACR,cont,,1,0,zero
+test,C-peptide,test|C-peptide,cont,,1,0,zero
+test,PH,test|PH,cont,,1,0,zero
+test,pH,test|pH,cont,,1,0,zero
+test,β-hydroxybutyrate,test|β-hydroxybutyrate,cont,,1,0,zero
+test,Alanine aminotransferase,test|Alanine aminotransferase,cont,,1,0,zero
+test,Neutrophils,test|Neutrophils,cont,,1,0,zero
+test,Neutrophil count,test|Neutrophil count,cont,,1,0,zero
+test,Neutrophil percentage,test|Neutrophil percentage,cont,,1,0,zero
+test,Lactate dehydrogenase,test|Lactate dehydrogenase,cont,,1,0,zero
+test,Carbon dioxide,test|Carbon dioxide,cont,,1,0,zero
+test,Total carbon dioxide,test|Total carbon dioxide,cont,,1,0,zero
+test,Nitrite,test|Nitrite,cont,,1,0,zero
+test,LDL cholesterol,test|LDL cholesterol,cont,,1,0,zero
+test,Humoral protein,test|Humoral protein,cont,,1,0,zero
+test,Adrenocorticotropic hormone(ACTH),test|Adrenocorticotropic hormone(ACTH),cont,,1,0,zero
+test,Monocytes,test|Monocytes,cont,,1,0,zero
+test,Monocyte percentage,test|Monocyte percentage,cont,,1,0,zero
+test,Basophils,test|Basophils,cont,,1,0,zero
+test,Basophil percentage,test|Basophil percentage,cont,,1,0,zero
+test,Eosinophils,test|Eosinophils,cont,,1,0,zero
+test,Eosinophil percentage,test|Eosinophil percentage,cont,,1,0,zero
+test,Large platelet ratio,test|Large platelet ratio,cont,,1,0,zero
+test,Aspartate aminotransferase,test|Aspartate aminotransferase,cont,,1,0,zero
+test,Urine calcium/urine creatinine,test|Urine calcium/urine creatinine,cont,,1,0,zero
+test,Urine chlorine,test|Urine chlorine,cont,,1,0,zero
+test,Urine creatinine determination,test|Urine creatinine determination,cont,,1,0,zero
+test,Urine albumin,test|Urine albumin,cont,,1,0,zero
+test,Urine albumin/urine creatinine,test|Urine albumin/urine creatinine,cont,,1,0,zero
+test,Urine albumin/creatinine,test|Urine albumin/creatinine,cont,,1,0,zero
+test,Urine phosphorus,test|Urine phosphorus,cont,,1,0,zero
+test,Urea,test|Urea,cont,,1,0,zero
+test,Urine creatinine,test|Urine creatinine,cont,,1,0,zero
+test,Urobilinogen,test|Urobilinogen,cont,,1,0,zero
+test,Urine bilirubin,test|Urine bilirubin,cont,,1,0,zero
+test,Urine glucose,test|Urine glucose,cont,,1,0,zero
+test,Urine protein,test|Urine protein,cont,,1,0,zero
+test,Urine ketone bodies,test|Urine ketone bodies,cont,,1,0,zero
+test,Urine output,test|Urine output,cont,,1,0,zero
+test,Urine calcium,test|Urine calcium,cont,,1,0,zero
+test,Urine sodium,test|Urine sodium,cont,,1,0,zero
+test,Urine potassium,test|Urine potassium,cont,,1,0,zero
+test,Urine magnesium,test|Urine magnesium,cont,,1,0,zero
+test,Mean corpuscular volume,test|Mean corpuscular volume,cont,,1,0,zero
+test,Mean platelet volume,test|Mean platelet volume,cont,,1,0,zero
+test,Mean hemoglobin concentration,test|Mean hemoglobin concentration,cont,,1,0,zero
+test,Mean corpuscular hemoglobin,test|Mean corpuscular hemoglobin,cont,,1,0,zero
+test,Total cholesterol,test|Total cholesterol,cont,,1,0,zero
+test,Total bile acid,test|Total bile acid,cont,,1,0,zero
+test,Total bilirubin,test|Total bilirubin,cont,,1,0,zero
+test,Unclassified crystallization,test|Unclassified crystallization,cont,,1,0,zero
+test,Chloride,test|Chloride,cont,,1,0,zero
+test,Lymphocytes,test|Lymphocytes,cont,,1,0,zero
+test,Lymphocyte count,test|Lymphocyte count,cont,,1,0,zero
+test,Lymphocyte percentage,test|Lymphocyte percentage,cont,,1,0,zero
+test,Free triiodothyronine,test|Free triiodothyronine,cont,,1,0,zero
+test,Free thyroxine,test|Free thyroxine,cont,,1,0,zero
+test,Free fatty acid,test|Free fatty acid,cont,,1,0,zero
+test,Hemolytic index,test|Hemolytic index,cont,,1,0,zero
+test,Triglycerides2,test|Triglycerides2,cont,,1,0,zero
+test,Triglycerides,test|Triglycerides,cont,,1,0,zero
+test,Albumin/globulion (ratio),test|Albumin/globulion (ratio),cont,,1,0,zero
+test,Leukocyte,test|Leukocyte,cont,,1,0,zero
+test,Total white blood cells,test|Total white blood cells,cont,,1,0,zero
+test,White blood cell count,test|White blood cell count,cont,,1,0,zero
+test,Albumin,test|Albumin,cont,,1,0,zero
+test,Cortisol,test|Cortisol,cont,,1,0,zero
+test,Cortisol 1,test|Cortisol 1,cont,,1,0,zero
+test,Direct bilirubin,test|Direct bilirubin,cont,,1,0,zero
+test,Alkaline phosphatase,test|Alkaline phosphatase,cont,,1,0,zero
+test,Fasting C-peptide,test|Fasting C-peptide,cont,,1,0,zero
+test,Fasting insulin,test|Fasting insulin,cont,,1,0,zero
+test,Glycated albumin%,test|Glycated albumin%,cont,,1,0,zero
+test,Glycated hemoglobin,test|Glycated hemoglobin,cont,,1,0,zero
+test,Red blood cells,test|Red blood cells,cont,,1,0,zero
+test,Hematocrit,test|Hematocrit,cont,,1,0,zero
+test,Red blood cell count,test|Red blood cell count,cont,,1,0,zero
+test,Red blood cell microscopy,test|Red blood cell microscopy,cont,,1,0,zero
+test,Bacteria,test|Bacteria,cont,,1,0,zero
+test,Crystallization inspection,test|Crystallization inspection,cont,,1,0,zero
+test,Creatinine,test|Creatinine,cont,,1,0,zero
+test,Estimated glomerular filtration rate,test|Estimated glomerular filtration rate,cont,,1,0,zero
+test,Insulin,test|Insulin,cont,,1,0,zero
+test,Platelets,test|Platelets,cont,,1,0,zero
+test,Platelet volume,test|Platelet volume,cont,,1,0,zero
+test,Serum anion gap,test|Serum anion gap,cont,,1,0,zero
+test,Hemoglobin,test|Hemoglobin,cont,,1,0,zero
+test,Ketone bodies,test|Ketone bodies,cont,,1,0,zero
+test,Yeast,test|Yeast,cont,,1,0,zero
+test,Calcium,test|Calcium,cont,,1,0,zero
+test,Calcium phosphate product,test|Calcium phosphate product,cont,,1,0,zero
+test,Sodium,test|Sodium,cont,,1,0,zero
+test,Potassium,test|Potassium,cont,,1,0,zero
+test,Magnesium,test|Magnesium,cont,,1,0,zero
+test,Anion gap,test|Anion gap,cont,,1,0,zero
+test,Colour,test|Colour,cont,,1,0,zero
+test,HDL cholesterol,test|HDL cholesterol,cont,,1,0,zero
+test,Jaundice index,test|Jaundice index,cont,,1,0,zero
+drug,DPP4i,drug|DPP4i,cat2,,2,0,zero
+drug,GLP-1,drug|GLP-1,cat2,,2,0,zero
+drug,TZDs,drug|TZDs,cat2,,2,0,zero
+drug,α-glucosidase inhibitors,drug|α-glucosidase inhibitors,cat2,,2,0,zero
+drug,Metformin,drug|Metformin,cat2,,2,0,zero
+drug,Glinides,drug|Glinides,cat2,,2,0,zero
+drug,Hormone,drug|Hormone,cat2,,2,0,zero
+drug,Sulfonylureas,drug|Sulfonylureas,cat2,,2,0,zero
+drug,Insulin,drug|Insulin,cat2,,2,0,zero
+glu,glu,glu|glu,cont,,1,0,zero
